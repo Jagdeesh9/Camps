@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- adding font awsome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        /* navigation bar section start */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            padding: 15px 10px;
+            background-color: rgb(34, 202, 182);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        nav>div{
+            display: flex;
+            align-items: center;
+        }
+        /* nav>div>img{
+            /* height: 50px;
+        } */
+        nav>div>ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        nav>div>ul>li{
+            padding:10px 20px;
+            position: relative;
+            transition: all .5s;
+        }
+        nav>div>ul>li>a{
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            transition: all .1s;
+            transition: all .2s;
+            font-weight: 400;
+            /* font-weight:; */
+        }
+        nav>div>span{
+            font-size: 20px;
+        }
+        nav>div>span>a>.fa{
+            font-size: 30px;
+            transform: all .1s;
+
+        }
+        nav>div>span>a>.fa:hover{
+            transform: scale(1.1);
+            transform: all .1s;
+            border-radius: 5px;
+            box-shadow: 0 0 5px whitesmoke;
+        }
+        .fa-facebook-square{
+            color: blue;
+        }
+        .fa-youtube-square{
+            color: #ff0000;
+        }
+        .spantext{
+            padding-right: 20px;
+            border-right: 2px solid black;
+        }
+        nav>div>ul>li>a:hover{
+            color: black;
+            font-weight: 600;
+        }
+        nav>div>ul>li:hover{
+            transform: translateY(-5px);
+            transition: all .2s;
+        }
+        
+        .submenu{
+            position:absolute;
+            list-style: none;
+            background-color: aquamarine;
+            width: 150px;
+            top: 75px;
+            left: 10px;
+            padding: 0px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        nav>div>ul>li:hover .submenu{
+            position:absolute;
+            top: 65px;
+            transition: all .5s ease;
+            opacity: 1; 
+            visibility: visible
+        }
+        .submenu>li{
+            padding: 10px 30px;
+        }
+        .submenu>li:hover{
+            background-color: rgb(34, 202, 182);
+            /* color: #000; */
+            color: #000;
+
+        }
+        .submenu>li>a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #check,.fa-bars,.fa-times{
+            display: none;
+        }
+        
+        @media(max-width:1100px){
+            nav{
+                width: 100%;
+                padding: 10px 0px;
+            }
+            nav>div>ul{
+                width: 100%;
+                position:absolute;
+                display:inline-block;
+                padding:10px 10px;
+                top: 68px;
+                left: -100%;
+                background-color: aquamarine;
+                transition: all .5s;
+            }
+            
+            nav>div>ul>li:hover{
+                transform: translateX(5px);
+                background-color:rgb(34, 202, 182);
+                /* padding-left: 50%; */
+            }
+            .submenu{
+                position: static;
+                height: 0;
+                opacity: 0;
+                visibility: hidden;
+                padding: 0;
+            }
+            nav>div>ul>li:hover .submenu{
+                visibility: visible;
+                position: static;
+                height: 150px;
+                width: 100%;
+                background-color: rgb(34, 202, 182);
+            }
+            
+            .submenu>li:hover{
+                background-color: aquamarine;
+            }
+            .spantext{
+                display: none;
+            }
+            
+            #check:checked~ul{
+                /* height: 10px; */
+                left: 0;
+                transition: all .5s;
+            }
+            #check:checked~.icons .fa-bars{
+                display: none;
+            }
+            #check:checked~.icons .fa-times{
+                display: block;
+            }
+            .fa-bars,.fa-times{
+                display: block;
+                position: absolute;
+                left:92%;
+                font-size: 25px;
+                top: 20px;
+            }
+            .fa-times{
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./logo.png.webp" alt="">
+                <input type="checkbox" id="check">
+                <label for="check" class="icons">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
+            
+                </label>
+                
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a>
+                        <ul class="submenu">
+                            <li><a href="">Rafting</a></li>
+                            <li><a href="">Camping</a></li>
+                            <li><a href="">Treking</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a>
+                        <ul class="submenu">
+                            <li><a href="">Rafting</a></li>
+                            <li><a href="">Camping</a></li>
+                            <li><a href="">Treking</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            
+            <div>
+                <span class="spantext"><b>Call Us</b>&nbsp;:9368567722</span>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span>
+                    <a href=""><i class="fa fa-facebook-square"></i></a>
+                        &nbsp;
+                    <a href=""><i class="fa fa-linkedin-square"></i></a>
+                        &nbsp;
+                    <a href=""><i class="fa fa-youtube-square"></i></a>
+                </span>
+            </div>
+        </nav>
+    </header>
+</body>
+<script src="./script.js"></script>
+</html>
