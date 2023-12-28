@@ -27,7 +27,8 @@
             align-items: center;
         }
         /* nav>div>img{
-            /* height: 50px;
+            width: 100px;
+            height: 100px;
         } */
         nav>div>ul{
             display: flex;
@@ -101,6 +102,8 @@
         }
         .submenu>li{
             padding: 10px 30px;
+            display: flex;
+            align-items: center;
         }
         .submenu>li:hover{
             background-color: rgb(34, 202, 182);
@@ -114,6 +117,9 @@
         }
         #check,.fa-bars,.fa-times{
             display: none;
+        }
+        .fa-whatsapp,.fa-facebook-square,.fa-instagram{
+            font-size: 25px;
         }
         
         @media(max-width:1100px){
@@ -173,7 +179,7 @@
             .fa-bars,.fa-times{
                 display: block;
                 position: absolute;
-                left:92%;
+                right: 10%;
                 font-size: 25px;
                 top: 20px;
             }
@@ -182,6 +188,12 @@
             }
             
         }
+        @media(max-width:500px){
+            .iconspan{
+                display: none;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -201,14 +213,14 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a>
                         <ul class="submenu">
-                            <li><a href="">Rafting</a></li>
-                            <li><a href="">Camping</a></li>
-                            <li><a href="">Treking</a></li>
+                            <li><a href=""><i class="fa fa-whatsapp"></i>&nbsp; Whatsapp</a></li>
+                            <li><a href=""><i class="fa fa-facebook-square">&nbsp;</i>Visit Us At facebook</a></li>
+                            <li><a href=""><i class="fa fa-instagram"></i>&nbsp;visit Us At Instagram</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Services</a>
                         <ul class="submenu">
-                            <li><a href="">Rafting</a></li>
+                            <li><a href="">iRafting</a></li>
                             <li><a href="">Camping</a></li>
                             <li><a href="">Treking</a></li>
                         </ul>
@@ -219,15 +231,16 @@
             
             <div>
                 <span class="spantext"><b>Call Us</b>&nbsp;:9368567722</span>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                <span>
+                &nbsp;&nbsp;
+                <span class="iconspan">
                     <a href=""><i class="fa fa-facebook-square"></i></a>
                         &nbsp;
                     <a href=""><i class="fa fa-linkedin-square"></i></a>
                         &nbsp;
                     <a href=""><i class="fa fa-youtube-square"></i></a>
+                        &nbsp;
+                    <a href=""><i class="fa fa-linkedin-square"></i></a>
+
                 </span>
             </div>
         </nav>
